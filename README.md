@@ -1,1 +1,1 @@
-# And editable inventory program created with Java and JavaFX
+# An editable inventory program created with Java and JavaFX
