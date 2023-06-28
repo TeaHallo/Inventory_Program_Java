@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="437.0" prefWidth="494.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.AddPartController">
+   <children>
+      <Pane layoutX="35.0" layoutY="46.0" prefHeight="377.0" prefWidth="424.0">
+         <children>
+            <Label layoutX="3.0" text="Add Part">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Pane layoutX="14.0" layoutY="71.0" prefHeight="235.0" prefWidth="358.0">
+               <children>
+                  <Label layoutX="5.0" layoutY="6.0" text="ID" />
+                  <Label layoutX="5.0" layoutY="41.0" text="Name" />
+                  <Label layoutX="5.0" layoutY="83.0" text="Inv" />
+                  <Label layoutX="5.0" layoutY="118.0" text="Price/Cost" />
+                  <Label layoutX="5.0" layoutY="163.0" text="Max" />
+                  <Label fx:id="switchLabel" layoutX="5.0" layoutY="202.0" text="Company Name" />
+                  <Label layoutX="214.0" layoutY="163.0" text="Min" />
+                  <TextField fx:id="idBox" disable="true" editable="false" layoutX="100.0" layoutY="2.0" promptText="Auto-Gen Disabled">
+                     <padding>
+                        <Insets bottom="5.0" top="5.0" />
+                     </padding>
+                  </TextField>
+                  <TextField fx:id="nameBox" layoutX="100.0" layoutY="37.0" promptText="Part Name">
+                     <padding>
+                        <Insets bottom="5.0" top="5.0" />
+                     </padding>
+                  </TextField>
+                  <TextField fx:id="invBox" layoutX="100.0" layoutY="78.0" promptText="Inv">
+                     <padding>
+                        <Insets bottom="5.0" top="5.0" />
+                     </padding>
+                  </TextField>
+                  <TextField fx:id="priceBox" layoutX="100.0" layoutY="114.0" promptText="Price/Cost">
+                     <padding>
+                        <Insets bottom="5.0" top="5.0" />
+                     </padding>
+                  </TextField>
+                  <TextField fx:id="maxBox" layoutX="100.0" layoutY="158.0" prefHeight="25.0" prefWidth="100.0" promptText="Max">
+                     <padding>
+                        <Insets bottom="5.0" top="5.0" />
+                     </padding>
+                  </TextField>
+                  <TextField fx:id="minBox" layoutX="244.0" layoutY="159.0" prefHeight="25.0" prefWidth="100.0" promptText="Min" />
+                  <TextField fx:id="companyNameBox" layoutX="100.0" layoutY="197.0" promptText="Comp Nm">
+                     <padding>
+                        <Insets bottom="5.0" top="5.0" />
+                     </padding>
+                  </TextField>
+               </children>
+            </Pane>
+            <Group layoutX="182.0" layoutY="5.0">
+               <children>
+                  <RadioButton fx:id="inHousePartRadioButton" mnemonicParsing="false" onAction="#OnInHouseButton" text="In-House">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="Group" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="outsourcedPartRadioButton" layoutX="93.0" mnemonicParsing="false" onAction="#OnOutsourcedButton" selected="true" text="Outsourced" toggleGroup="$Group" />
+               </children>
+            </Group>
+            <Button fx:id="savePartButton" defaultButton="true" layoutX="267.0" layoutY="338.0" mnemonicParsing="false" onAction="#SaveAndExit" prefWidth="60.0" text="Save" />
+            <Button fx:id="cancelButton" cancelButton="true" layoutX="350.0" layoutY="338.0" mnemonicParsing="false" onAction="#GoToMainScreen" prefWidth="60.0" text="Cancel" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
